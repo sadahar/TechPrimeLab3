@@ -1,0 +1,134 @@
+
+
+<div class="left-column mt-1">
+    <button class="btn" [routerLink]="['/dashbord']">
+      <img src="/Dashboard-active.svg" style="width: 25px; height: 25px" alt="" />
+    </button>
+    <button class="btn mt-3" [routerLink]="['/projectlist']">
+      <img
+        src="/Project-list-active.svg"
+        style="width: 25px; height: 25px"
+        alt=""
+      />
+    </button>
+    <button class="btn mt-3" [routerLink]="['/addproject']">
+      <img
+        src="/create-project-active.svg"
+        style="width: 25px; height: 25px"
+        alt=""
+      />
+    </button>
+    <button class="btn mt-5" [routerLink]="['/login']" >
+         <img src="Logout.svg"  alt="" style="width: 25px; height: 25px;">
+    </button>
+  </div>
+
+  <div class="b1 ms-5 " id="maindiv">
+    <div class="" id="subdiv">
+        <a href=""><b class="c1">&nbsp;&nbsp;< Project Listing</b></a>
+         <img class="mt-4" src="/Logo.svg" style="width: 80%;" alt="Logo">
+    </div> 
+    <div class="mx-auto bg-light ps-3 pe-3 pt-3 pb-3 mt-3 " style="margin-right: 10px;"  id="formdiv">
+        <form [formGroup]="myform" class="search-form mt-3 ">
+            <label for="search">Search:</label>
+            <input type="search" id="search"  name="query" placeholder="Type to search..." ([ngModel])="searchproject">
+           <!-- (input)="filteredProject($event.target.value)" -->
+
+            <label class="form-lable text-secondary" name="sortBy" ><small>Sort By:</small></label>
+            <select class="form-select" style="width: 200px;" name="" id="">
+                  <option value="Priority">Priority</option>
+                  <option value="Reason">Reason</option>
+                  <option value="Type">Type</option>
+                  <option value="Division">Division</option>
+                  <option value="Location">Location</option>
+                  <option value="Category">Category</option>
+                  <option value="Department">Department</option>
+            </select>
+             
+            
+
+        </form>
+        <form [formGroup]="myform">
+            <div class="div1 text-center ">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Project Name</th>
+                            <th>Reason</th>
+                            <th>Type</th>
+                            <th>Category</th>
+                            <th>Priority</th>
+                            <th>Division</th>
+                            <th>Department</th>
+                            <th>Location</th>
+                            <th>Status</th>
+                            <th colspan="4">Operations</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <tr *ngFor="let p of plist | filter:searchproject"> -->
+                          <tr *ngFor="let p of plist ">
+                            <td>{{p.pname}}</td>
+                            <td>{{p.reason}}</td>
+                            <td>{{p.type}}</td>
+                            <td>{{p.category}}</td>  
+                            <td>{{p.priority}}</td>
+                            <td>{{p.division}}</td>
+                            <td>{{p.department}}</td>
+                            <td>{{p.location}}</td>
+                            <td>{{pstatus}}</td>
+
+                            
+                            <!-- (click)="pstart(p)"   [routerLink]="['/proid',p.id]" -->
+                           
+                            <td><button class="btn btn-success" [ngClass]="statusClass(p)">Start</button></td>  
+                            <td><button class="btn btn-danger" (click)="pclose(p)" > Close </button></td>
+                            <td><button class="btn btn-info" (click)="pcancel(p)">Cancel</button></td>
+
+                            <!-- <td><button class="btn btn-warning" (click)="editproject(p)">edit</button></td> -->
+                        </tr>
+                        
+                    </tbody>
+                      
+                </table>
+            </div>
+
+            
+
+        </form>
+    </div>
+
+     <div class="pegination">
+
+        <!-- <app-pagination></app-pagination> -->
+
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-center mt-3">
+            <li class="page-item">
+              <a class="page-link"  aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link" >1</a></li>
+            <li class="page-item"><a class="page-link" >2</a></li>
+            <li class="page-item"><a class="page-link" >3</a></li>
+            <li class="page-item"><a class="page-link" >4</a></li>
+            <li class="page-item"><a class="page-link" >5</a></li>
+            <li class="page-item"><a class="page-link" >6</a></li>
+            <li class="page-item">
+              <a class="page-link"  aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <br>
+        
+
+     </div>
+
+  </div>
+
+
+
+

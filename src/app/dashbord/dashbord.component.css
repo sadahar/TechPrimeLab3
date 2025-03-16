@@ -1,0 +1,90 @@
+
+
+.left-column {
+    width: 40px;
+    height: 100vh;
+
+
+    background-color: #ffffff;
+     
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+
+
+  #logoutimg
+    {
+      flex-direction: column;
+       
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    #maindiv {
+        height: 150px;
+        background-image: url('/Header-bg.svg');
+        border-bottom-left-radius: 100px;
+        background-color: blue;
+  
+      }
+
+
+     
+      
+      img {
+        width: 50px;
+        height: 50px;
+      
+      }
+
+      .first {
+        color: white;
+      }
+
+      a {
+        text-decoration: none;
+      }
+      
+      .c1 {
+        color: white;
+        text-align-last: left;
+      
+      }
+      
+
+      .box1
+      {
+        margin-top: 19px;
+        /* margin-left: 5px; */
+        border-radius: 5px;
+        border-left: solid thick rgb(52, 185, 234);
+        background-color: rgb(253, 253, 253);
+        border-bottom-style: groove;
+
+      }
+
+      .chartbox
+      {
+        width: 500px;
+        height: 320px;
+        
+        background-color: rgb(239, 246, 246);
+      
+        border-radius: 5px;
+        box-shadow: #ffffff;
+
+
+
+      }
+
+      .row
+      {
+        position: fixed;
+      }

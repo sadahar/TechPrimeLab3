@@ -1,0 +1,248 @@
+
+
+
+
+<div class="left-column mt-1">
+    <button class="btn" [routerLink]="['/dashbord']">
+      <img src="/Dashboard-active.svg" style="width: 25px; height: 25px" alt="" />
+    </button>
+    <button class="btn mt-3" [routerLink]="['/projectlist']">
+      <img 
+        src="/Project-list-active.svg"
+        style="width: 25px; height: 25px"
+        alt=""
+      />
+    </button>
+    <button class="btn mt-3" [routerLink]="['/addproject']">
+      <img
+        src="/create-project-active.svg"
+        style="width: 25px; height: 25px"
+        alt=""
+      />
+    </button>
+    <button class="btn mt-5"  [routerLink]="['/login']">
+         <img src="Logout.svg"  alt="" style="width: 25px; height: 25px;">
+    </button>
+  </div>
+
+
+  <div class="b1 ms-5" id="maindiv">
+    <div class="" id="subdiv">
+      <a href=""><b class="c1"> &nbsp;&nbsp;< Create Project</b> </a>
+      <img class="mt-4" style="width: 80%" src="/Logo.svg" alt="Logo" />
+    </div>
+  
+    <div class="mx-auto bg-light ps-2 pe-3 pt-3 pb-3 mt-4" id="formdiv">
+      <form [formGroup]="myform">
+        <div class="text text-secondary">
+          <div class="row">
+            <div class="col m-2">
+              <textarea
+                cols="85"
+                rows="3"
+                class="form-control"
+                name=""
+                id=""
+                placeholder="Enter Project Name"
+                formControlName="pname"
+              ></textarea>
+              <div *ngIf="pname?.touched && pname?.invalid">
+                <p class="text-danger" *ngIf="pname?.errors?.['required']">
+                  <small>*Project Name Required</small>
+                </p>
+              </div>
+            </div>
+            <div class="text-end pe-5 pt-3 col m-2">
+              <button class="btn btn-primary btn-s rounded-pill ps-4 pe-4" id="btn1" (click)="saveproject()" [disabled]="!myform.valid">
+                {{btnname}}
+              </button>
+            </div>
+          </div>
+        </div>
+  
+        <div class="pe-5 divdiv">
+          <div class="row">
+            <div class="col m-2">
+              <label class="form-lable text-secondary"
+                ><small>Reason</small>
+              </label>
+              <select
+                type=""
+                name=""
+                class="form-select"
+                formControlName="reason"
+              >
+                <option value="Business">For Business</option>
+                <option value="Personal">For Personal</option>
+                <option value="Dealership">For Dealership</option>
+                <option value="For Transport">For Transport</option>
+              </select>
+              <div *ngIf="reason?.touched && reason?.invalid">
+                <p class="text-danger" *ngIf="reason?.errors?.['required']">
+                  <small>*Reason required</small>
+                </p>
+              </div>
+            </div>
+  
+            <div class="col m-2">
+              <label class="form-lable text-secondary"><small>Type</small></label>
+              <br />
+              <select
+                class="form-select"
+                name=" "
+                aria-placeholder="Internal"
+                formControlName="type"
+              >
+                <option value="Internal">Internal</option>
+                <option value="External">External</option>
+                <option value="Outsources">Outsources</option>
+                <option value="Contractual">Contractual</option>
+              </select>
+              <div *ngIf="type?.touched && type?.invalid">
+                <p class="text-danger" *ngIf="type?.errors?.['required']">
+                  <small>*Type required</small>
+                </p>
+              </div>
+            </div>
+  
+            <div class="col m-2">
+              <label class="form-lable text-secondary"
+                ><small>Division</small></label
+              >
+              <select
+                class="form-select"
+                name=""
+                id=""
+                formControlName="division"
+              >
+                <option value="Filters">Filters</option>
+                <option value="Matchers">Matchers</option>
+                <option value="Chatchers">Chatchers</option>
+                <option value="Rounder">Rounder</option>
+              </select>
+              <div *ngIf="division?.touched && division?.invalid">
+                <p class="text-danger" *ngIf="division?.errors?.['required']">
+                  <small>*Division required</small>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col m-2">
+              <label class="form-lable text-secondary"
+                ><small>Category</small></label
+              >
+              
+              <select
+                class="form-select"
+                name=" "
+                id=""
+                formControlName="category"
+              >
+                <option value="Category A">Category A</option>
+                <option value="Category B">Category B</option>
+                <option value="Category C">Category C</option>
+                <option value="Category D">Category D</option>
+              </select>
+  
+              <div *ngIf="category?.touched && category?.invalid">
+                <p class="text-danger" *ngIf="category?.errors?.['required']">
+                  <small>*Category required</small>
+                </p>
+              </div>
+            </div>
+  
+            <div class="col m-2">
+              <label class="form-lable text-secondary"
+                ><small>Priority</small></label
+              >
+              <select
+                class="form-select"
+                name=" "
+                id=""
+                formControlName="priority">
+                <option value="High">High</option>
+                <option value="Meddium">Meddium</option>
+                <option value="Low">Low</option>
+              </select>
+              <div *ngIf="priority?.touched && priority?.invalid">
+                <p class="text-danger" *ngIf="priority?.errors?.['required']">
+                  <small>*Priority required</small>
+                </p>
+              </div>
+            </div>
+            <div class="col m-2">
+              <label class="form-lable text-secondary"
+                ><small>Department</small></label
+              >
+  
+              <select class="form-select" name=" " id="" formControlName="department">
+                <option value="Strategy">Strategy</option>
+                <option value="Quality">Quality</option>
+                <option value="Manager">Manager</option>
+                <option value="Saler">Saler</option>
+              </select>
+              <div *ngIf="department?.touched && department?.invalid">
+                <p class="text-danger" *ngIf="department?.errors?.['required']">
+                  <small>*department required</small>
+                </p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col m-2">
+              <label class="form-lable text-secondary"
+                ><small>Start Date as per Project Plan</small></label>
+              <input type="date" class="form-control" formControlName="sdate"/>
+              <div *ngIf="sdate?.touched && sdate?.invalid">
+                <p class="text-danger" *ngIf="sdate?.errors?.['required']">
+                  <small>*start date required</small>
+                </p>
+              </div>
+            </div>
+            
+  
+            <div class="col m-2">
+              <label class="form-lable text-secondary"
+                ><small>End Date as per Project Plan</small></label>
+                <input type="date" class="form-control" formControlName="edate"/>
+                <div *ngIf="edate?.touched && edate?.invalid">
+                  <p class="text-danger" *ngIf="edate?.errors?.['required']">
+                    <small>*end date required</small>
+                  </p>
+                </div>
+              </div>
+  
+              <div class="col m-2">
+                  <label class="form-lable text-secondary"><small>Location</small></label>
+                  <select class="form-select" name=" " id="" formControlName="location">
+                  <option value="Pune">Pune</option>
+                  <option value="Mumbai">Mumbai</option>
+                  <option value="Ch.SmbhajiNagar">Ch.SmbhajiNagar</option>
+                  <option value="Nagpur">Nagpur</option>
+                  <option value="Nashik">Nashik</option>
+                  <option value="Parbhani">Parbhani</option>
+                </select>
+                <div *ngIf="location?.touched && location?.invalid">
+                  <p class="text-danger" *ngIf="location?.errors?.['required']">
+                    <small>*location required</small>
+                  </p>
+                </div>
+            </div>
+          </div>
+  
+          <div class="p-3 status text-end">
+              <label class="form-lable text-start"  >
+                
+                  <small>Status:<b>{{pstatus}}</b></small>
+              </label>
+            </div>
+        </div>
+  
+      </form>
+  </div>
+  </div>
+  
+
+

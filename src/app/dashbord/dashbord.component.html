@@ -1,0 +1,119 @@
+
+
+<div class="left-column mt-1">
+    <button class="btn" [routerLink]="['/dashbord']">
+      <img src="/Dashboard-active.svg" style="width: 25px; height: 25px" alt="" />
+    </button>
+    <button class="btn mt-3" [routerLink]="['/projectlist']">
+      <img
+        src="/Project-list-active.svg"
+        style="width: 25px; height: 25px"
+        alt=""
+      />
+    </button>
+    <button class="btn mt-3" [routerLink]="['/addproject']">
+      <img
+        src="/create-project-active.svg"
+        style="width: 25px; height: 25px"
+        alt=""
+      />
+    </button>
+    <button class="btn mt-5" [routerLink]="['/login']" >
+         <img src="Logout.svg"  alt="" style="width: 25px; height: 25px;">
+    </button>
+</div>
+
+
+
+
+<div class="b1 ms-5 " id="maindiv">
+    <div class="" id="subdiv">
+        <a [routerLink]="['/dashbord']"><b class="c1">&nbsp;&nbsp;< Dashbord</b></a>
+         <img class="mt-4" src="/Logo.svg" style="width: 80%;" alt="Logo">
+    </div> 
+
+
+    <div class="pe-5 divdiv">
+        <div class="row" style="align-items: center;justify-self: center;">
+          <div class="col m-2">
+            <div class="box1" style="width: 200px; height: 15vh;">
+                <label class="form-lable text-secondary ms-2">
+                    <small>Total Project</small>
+                      
+                </label>
+                <h4 style="text-align: start; font-size: 30px;" class="mt-3 ms-3" [routerLink]="['/projectlist']">{{projectCount}}</h4>
+            </div>
+
+            
+            
+            
+          </div>
+
+          <div class="col m-2">
+          
+            <div class="box1" style="width: 200px; height: 15vh;">
+                <label class="form-lable text-secondary ms-2">
+                    <small>Closed</small>
+                      
+                </label>
+                <h4 style="text-align: start; font-size: 30px;" class="mt-3 ms-3">8</h4>
+            </div>
+            
+          </div>
+
+          <div class="col m-2">
+            <div class="box1" style="width: 200px; height: 15vh;">
+                <label class="form-lable text-secondary ms-2">
+                    <small>Running</small>
+                      
+                </label>
+                <h4 style="text-align: start; font-size: 30px;" class="mt-3 ms-3">{{startCount}}</h4>
+            </div>
+            
+          </div>
+          <div class="col m-2">
+          
+            <div class="box1" style="width: 200px; height: 15vh;">
+                <label class="form-lable text-secondary ms-2">
+                    <small>Closure Delay</small>
+                      
+                </label>
+                <h4 style="text-align: start; font-size: 30px;" class="mt-3 ms-3">8</h4>
+            </div>
+            
+          </div>
+          <div class="col m-2">
+          
+            <div class="box1" style="width: 200px; height: 15vh;">
+                <label class="form-lable text-secondary ms-2">
+                    <small>Cancelled</small>
+                      
+                </label>
+                <h4 style="text-align: start; font-size: 30px;" class="mt-3 ms-3">8</h4>
+
+                
+            </div>
+
+            
+            
+          </div>
+
+                <div>
+                       <h6 class="ms-1 mt-2">Department wise- Total vs Closed</h6>
+                </div>
+
+                      <div class="chartbox ms-3">
+                              
+                       </div>
+
+
+
+        </div>
+ 
+    </div>
+
+     
+
+
+
+</div>

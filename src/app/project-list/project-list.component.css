@@ -1,0 +1,151 @@
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+  }
+  
+  .search-form {
+    display: flex;
+
+    align-items: center;
+    background: #fff;
+    padding: 10px 20px;
+    
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+  }
+  
+  .search-form label {
+    margin-right: 0px;
+    font-weight: bold;
+
+
+  }
+  
+  .search-form input[type="search"] {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+
+    border-radius: 20px;
+    outline: none;
+    transition: all 0.3s;
+    margin-right: 599px;
+
+  }
+  
+  .search-form input[type="search"]:focus {
+    border-color: #c22213;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+
+  }
+  
+  .search-form button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: all 0.3s;
+  }
+  
+  .search-form button:hover {
+    background-color: #0056b3;
+  }
+  
+
+  .search-form label[name="sortBy"]
+  {
+    margin-right: 10px;
+    
+  } 
+
+
+  .left-column {
+    width: 40px;
+    height: 100vh;
+
+
+    background-color: #ffffff;
+     
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+
+
+  #logoutimg
+    {
+      flex-direction: column;
+       
+    }
+
+    a {
+      text-decoration: none;
+    }
+    
+    .c1 {
+      color: white;
+      text-align-last: left;
+    
+    }
+    #maindiv {
+      height: 150px;
+      background-image: url('/Header-bg.svg');
+      border-bottom-left-radius: 100px;
+
+    }
+    
+    img {
+      width: 50px;
+      height: 50px;
+    
+    }
+    
+    #subdiv {
+      position: relative;
+      font-size: 15px;
+      text-align: start;
+    }
+    
+    
+    .first {
+      color: white;
+    }
+    
+    #formdiv {
+      width: 98%;
+      border-radius: 10px;
+      box-shadow: 10px 10px 10px rgba(197, 17, 17, 0.2);
+      /* position: absolute; */
+
+    }
+    
+    
+    
+    .btn-custom {
+      width: 100%;
+      padding: 5px 0;
+      font-size: 12px;
+    }
+    .divdiv{
+      margin-right: 100px;
+    }
+
+    table{
+       position: sticky;
+    }
